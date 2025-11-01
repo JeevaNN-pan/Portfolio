@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jeevan - Data-driven solutions portfolio"
+    />
+    <title>Jeevan | Data-Driven Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fredoka+One&family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-container">
+        <a href="#hero" class="logo" aria-label="Home">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 100 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="5"
+              y="30"
+              font-family="Fredoka One, cursive"
+              font-size="28"
+              fill="#4F46E5"
+            >
+              J
+            </text>
+            <text
+              x="35"
+              y="30"
+              font-family="Fredoka One, cursive"
+              font-size="28"
+              fill="#06B6D4"
+            >
+              P
+            </text>
+          </svg>
+        </a>
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+          <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+          <li role="none"><a href="#about" role="menuitem">About</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" aria-label="Hero section">
+      <div class="hero-background">
+        <canvas id="particles-canvas" class="particles-canvas"></canvas>
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-name" data-animation="fade-up">Jeevan Kumar Panda</h1>
+          <p class="hero-tagline" data-animation="fade-up" data-delay="100">
+            Turning messy ideas into polished data-driven solutions.
+          </p>
+          <div class="hero-buttons" data-animation="fade-up" data-delay="200">
+            <a href="#projects" class="btn btn-primary" role="button"
+              >View Projects</a
+            >
+            <a href="#contact" class="btn btn-secondary" role="button"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="section projects-section"
+        aria-label="Projects"
+      >
+        <div class="section-bg-animation"></div>
+        <div class="container">
+          <h2 class="section-title" data-animation="fade-up">Projects</h2>
+          <p class="section-subtitle" data-animation="fade-up" data-delay="100">
+            A collection of data-driven solutions and automation tools
+          </p>
+          <div class="projects-grid" id="projects-grid" role="list">
+            <!-- Projects will be injected by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills-section" aria-label="Skills">
+        <div class="section-bg-animation"></div>
+        <div class="skills-bg-animation" id="skills-bg-animation"></div>
+        <div class="video-bg-animation" id="video-bg-animation"></div>
+        <div class="container">
+          <h2 class="section-title" data-animation="fade-up">
+            Tools & Technologies
+          </h2>
+          <div class="tools-section-wrapper">
+            <div class="tools-bg-animation" id="tools-bg-animation"></div>
+            <canvas
+              class="tools-particles-canvas"
+              id="tools-particles-canvas"
+            ></canvas>
+            <div class="tools-waves-container" id="tools-waves-container"></div>
+            <div class="tools-grid-pattern" id="tools-grid-pattern"></div>
+            <div
+              class="tools-ripples-container"
+              id="tools-ripples-container"
+            ></div>
+
+            <!-- Globe Container -->
+            <div
+              class="globe-wrapper"
+              data-animation="fade-up"
+              data-delay="200"
+            >
+              <div class="globe-container" id="tech-globe">
+                <!-- Skills will be injected by JavaScript -->
+              </div>
+              <div class="globe-controls">
+                <button
+                  class="globe-control-btn"
+                  id="globe-rotate-btn"
+                  aria-label="Toggle rotation"
+                >
+                  <span class="control-icon">▶️</span>
+                  <span class="control-text">Explore</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Description Modal -->
+          <div
+            class="tech-modal"
+            id="tech-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tech-modal-title"
+          >
+            <div class="tech-modal-overlay"></div>
+            <div class="tech-modal-content">
+              <button class="tech-modal-close" aria-label="Close modal">
+                ×
+              </button>
+              <div class="tech-modal-header">
+                <span class="tech-modal-icon" id="tech-modal-icon"></span>
+                <h3 class="tech-modal-title" id="tech-modal-title"></h3>
+              </div>
+              <p class="tech-modal-description" id="tech-modal-description"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section" aria-label="About">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text" data-animation="fade-up">
+              <h2 class="section-title">About</h2>
+              <p class="about-description">
+                Just another human trying to make the computer do what I mean,
+                not what I say.
+              </p>
+              <p class="about-description">
+                I'm passionate about transforming complex data into actionable
+                insights and building automation solutions that make life
+                easier. Whether it's analyzing datasets, training machine
+                learning models, or scraping the web for insights, I enjoy the
+                challenge of turning messy ideas into polished, data-driven
+                solutions.
+              </p>
+            </div>
+            <div
+              class="about-image-wrapper"
+              data-animation="fade-up"
+              data-delay="100"
+            >
+              <div class="about-image-placeholder">
+                <span class="initials">JP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="section contact-section"
+        aria-label="Contact"
+      >
+        <div class="container">
+          <h2 class="section-title" data-animation="fade-up">Get In Touch</h2>
+          <p class="section-subtitle" data-animation="fade-up" data-delay="100">
+            Let's connect and collaborate on interesting projects
+          </p>
+          <div class="contact-links" data-animation="fade-up" data-delay="200">
+            <a
+              href="mailto:jeevanpanda1234@gmail.com"
+              class="contact-link"
+              aria-label="Send email"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>jeevanpanda1234@gmail.com</span>
+            </a>
+            <a
+              href="https://github.com/JeevaNN-pan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              aria-label="GitHub profile"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jeevan-panda"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              aria-label="LinkedIn profile"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              aria-label="View resume PDF"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14,2 14,8 20,8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10,9 9,9 8,9" />
+              </svg>
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>&copy; 2024 Jeevan. Built with Love</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
